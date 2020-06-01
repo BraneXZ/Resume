@@ -16,10 +16,18 @@
 	}
 }
 
-% Personal information command
-% Parameter: {title,info}
+% Section seperators 
+\titlespacing{\section}{0pt}{0pt}{0pt} 
+\titlespacing{\subsection}{0pt}{0pt}{0pt}
+\newcommand{\sectionsep}{\vspace{8pt}}
 
-% Skills command
-% Parameter: {skill_name}
-
-% Section separators
+% Section headings
+\titleformat{\section}
+	{\normalfont\Large\bfseries\raggedright}{}
+	{0em}{}
+	
+	
+% Subsection headings
+\titleformat{\subsection}
+	{\normalfont}{}
+	{0em}{}
