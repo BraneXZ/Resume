@@ -29,5 +29,5 @@
 	
 % Subsection headings
 \titleformat{\subsection}
-	{\normalfont}{}
+	{\normalfont\bfseries\raggedright}{}
 	{0em}{}
