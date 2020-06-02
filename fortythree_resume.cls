@@ -24,7 +24,7 @@
 % Section headings
 \titleformat
 	{\section}
-	{\normalfont\Large\bfseries\raggedright}
+	{\normalfont\Large\bfseries\raggedright\uppercase}
 	{}
 	{0em}{}
 	
@@ -35,8 +35,25 @@
 	{}
 	{0em}{}
 	
+% Description command
 \newcommand{\descript}[1]{
 	\raggedright
 	\fontsize{11pt}{13pt}
 	\selectfont {#1 \\}
+}
+
+% Company and Title command
+\newcommand{\company}[2]{
+	\raggedright
+	\fontsize{10pt}{12pt}
+	\selectfont\bfseries\uppercase {#1}\fontsize{9pt}{11pt}\selectfont\itshape{, #2}\\
+}
+
+% Location & time command
+\newcommand{\location}[2]{
+	\raggedright
+	\fontsize{9pt}{11pt}
+	\normalfont
+	\selectfont {#1}
+	\hfill{#2}\\
 }
