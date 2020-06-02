@@ -10,7 +10,7 @@
 % Name command
 % Parameter: {first_name,last_name}
 \newcommand{\namesection}[2]{
-	\centering{\fontsize{40pt}{60pt}
+	\centering{\fontsize{40pt}{60pt} 
 		\selectfont #1 
 		\selectfont #2
 	}
@@ -22,12 +22,21 @@
 \newcommand{\sectionsep}{\vspace{8pt}}
 
 % Section headings
-\titleformat{\section}
-	{\normalfont\Large\bfseries\raggedright}{}
+\titleformat
+	{\section}
+	{\normalfont\Large\bfseries\raggedright}
+	{}
 	{0em}{}
-	
 	
 % Subsection headings
-\titleformat{\subsection}
-	{\normalfont\bfseries\raggedright}{}
+\titleformat
+	{\subsection}
+	{\normalfont\bfseries\raggedright}
+	{}
 	{0em}{}
+	
+\newcommand{\descript}[1]{
+	\raggedright
+	\fontsize{11pt}{13pt}
+	\selectfont {#1 \\}
+}
