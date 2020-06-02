@@ -49,11 +49,30 @@
 	\selectfont\bfseries\uppercase {#1}\fontsize{9pt}{11pt}\selectfont\itshape{, #2}\\
 }
 
+% Project command
+\newcommand{\project}[2]{
+	\raggedright
+	\fontsize{10pt}{12pt}
+	\selectfont\bfseries\uppercase{#1}
+	\normalfont
+	\hfill {#2}
+}
+
 % Location & time command
 \newcommand{\location}[2]{
 	\raggedright
 	\fontsize{9pt}{11pt}
+	\selectfont {#1}
+	\hfill{#2}
+}
+
+\newcommand{\itemdescript}[1]{
+	\fontsize{10pt}{12pt}
 	\normalfont
 	\selectfont {#1}
-	\hfill{#2}\\
 }
+
+% Bullet Lists with fewer gaps command
+\newenvironment{tightemize}{
+\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}
+{\end{itemize}\vspace{-\topsep}}
