@@ -2,6 +2,7 @@
 \ProvidesClass{fortythree_resume}[2020/06/01 Custom resume class]
 \LoadClass{article}
 \RequirePackage{titlesec}
+\RequirePackage{fontspec}
 
 % Packages
 \usepackage[hidelinks]{hyperref} % Remove ugly links
@@ -10,10 +11,12 @@
 % Name command
 % Parameter: {first_name,last_name}
 \newcommand{\namesection}[2]{
-	\centering{\fontsize{40pt}{60pt} 
+	\begin{center}{\fontsize{30pt}{45pt}
+	\normalfont\bfseries
 		\selectfont #1 
 		\selectfont #2
 	}
+	\end{center}
 }
 
 % Section seperators 
@@ -24,21 +27,21 @@
 % Section headings
 \titleformat
 	{\section}
-	{\normalfont\Large\bfseries\raggedright\uppercase}
+	{\fontspec{Stencil}\LARGE\bfseries\raggedright\uppercase}
 	{}
 	{0em}{}
 	
 % Subsection headings
 \titleformat
 	{\subsection}
-	{\normalfont\bfseries\raggedright}
+	{\normalsize\fontspec{Cambria}\bfseries\raggedright}
 	{}
 	{0em}{}
 	
 % Description command
 \newcommand{\descript}[1]{
 	\raggedright
-	\fontsize{11pt}{13pt}
+	\normalsize
 	\selectfont {#1 \\}
 }
 
@@ -54,20 +57,21 @@
 	\raggedright
 	\fontsize{10pt}{12pt}
 	\selectfont\bfseries\uppercase{#1}
-	\normalfont
+	\normalfont\fontsize{10pt}{12pt}\selectfont
 	\hfill {#2}
 }
 
 % Location & time command
 \newcommand{\location}[2]{
 	\raggedright
-	\fontsize{9pt}{11pt}
+	\fontsize{10pt}{12pt}
 	\selectfont {#1}
-	\hfill{#2}
+	\normalfont\fontsize{10pt}{12pt}\selectfont
+	\hfill {#2}
 }
 
 \newcommand{\itemdescript}[1]{
-	\fontsize{10pt}{12pt}
+	\normalsize
 	\normalfont
 	\selectfont {#1}
 }
